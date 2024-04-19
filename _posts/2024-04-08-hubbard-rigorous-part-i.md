@@ -458,7 +458,7 @@ $$\begin{align*}
 \mathbf W(d) = \mathbf W_1 + d\mathbf W_2 \leq \mathbb1 M(\mathbf W_1) + d\mathbf W_2
 \end{align*}$$
 
-and noting that $\mathbb1 M(\mathbf W_1) + d\mathbf W_2$ has at least one negative value in its spectrum for all $d < -M(\mathbf W_1) / M(\mathbf W_2)$ for nonzero $M(\mathbf W_2)$, we conclude that so does $\mathbf W(d)$. Thus, $d\mapsto m(\mathbf W(d))$ is negative on $\langle-\infty,-M(\mathbf W_1) / M(\mathbf W_2)\rangle$. If we now denote the smallest zero of this function by $d_0$, then for an arbitrary $\varepsilon>0$, it holds that $m(\mathbf W(d_0-\varepsilon))<0$. Such a point exists because, as was observed before, this function is nonnegative for nonnegative $d$.
+and noting that $\mathbb1 M(\mathbf W_1) + d\mathbf W_2$ has at least one negative value in its spectrum for all $d < -M(\mathbf W_1) / M(\mathbf W_2)$ for nonzero $M(\mathbf W_2)$ (satisfied because otherwise, since $\mathbf W_2$ is p.s.d., it would be null and thus not correspond to a ground state), we conclude that so does $\mathbf W(d)$. Thus, $d\mapsto m(\mathbf W(d))$ is negative on $\langle-\infty,-M(\mathbf W_1) / M(\mathbf W_2)\rangle$. If we now denote the smallest zero of this function by $d_0$, then for an arbitrary $\varepsilon>0$, it holds that $m(\mathbf W(d_0-\varepsilon))<0$. Such a point exists because, as was observed before, this function is nonnegative for nonnegative $d$.
 
 Furthermore, since $m(\mathbf W(d\_0))=0$, it follows that $M(\mathbf W(d\_0))\neq0$ because otherwise $\mathbf W(d\_0)=\mathbf 0$, which is impossible since $\mathbf W\_1$ and $\mathbf W\_2$ are not scalar multiples of each other. Thus, $M(\mathbf W(d\_0))>0$.
 
