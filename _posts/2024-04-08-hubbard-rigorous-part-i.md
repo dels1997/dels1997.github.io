@@ -439,8 +439,8 @@ In other words, by choosing different $\beta$, we find that all base elements $\
 
 From $\mathbf W = \pm\|\mathbf W\|$, we can now finally prove part 2. of Theorem 1 via contradiction. Suppose that there exist two normalized --- in sense of $(\text{N})$ --- ground states described by $\mathbf W_1$ and $\mathbf W_2$ such that $\mathbf W_1\neq \pm \mathbf W_2$. Then for every $d\in\mathbb R$, we can define $\mathbf W^{(d)} \coloneqq \mathbf W_1 + d\mathbf W_2$ which is evidently nonzero and (after normalization) a ground state of the system due to $(8)$ being linear in $\mathbf W$. Furthermore, due to $\mathbf W = \pm \|\mathbf W\|$, $\mathbf W_1$ and $\mathbf W_2$ are either p.s.d. or n.s.d. We can assume WLOG that both $\mathbf W_1$ and $\mathbf W_2$ are, for example, p.s.d. because if they are of different definiteness, we can simply employ $d\leadsto-d$, or change sign of the whole expression (evidently not changing the fact that the total operator is neither p.s.d. nor n.s.d.), and  by combining these two operations, all four cases are handled analogously. Thus, with this assumption, we conclude that $\text{Tr}\mathbf W_1 > 0$ and $\text{Tr}\mathbf W_2 > 0$ because otherwise all their eigenvalues would be zero. But due to linearity of trace, $\text{Tr}\mathbf W^{(d)} = \text{Tr}\mathbf W_1+d\,\text{Tr}\mathbf W_2$  and by choosing an obvious $d$, we get $\text{Tr}\mathbf W^{(d)} = 0$. Since $\mathbf W_1$ and $\mathbf W_2$ are not scalar multiples of one another, it is not possible that all eigenvalues of $\mathbf W^{(d)}$ are zero. But if at least one of them is negative (positive), there ought to exist at least one positive (negative) so that they could sum up to vanishing trace. Thus, we conclude that for this choice of $d$, the operator $\mathbf W^{(d)}$ is neither p.s.d. nor n.s.d. and therefore does not describe a ground state of the system[^6].
 
-<details><summary markdown="span">Another line of reasoning to show that $\mathbf W^{(d)}$ is neither p.s.d. nor n.s.d., due to Ilja Gogić.[^7]</summary>
-For an arbitrary Hermitian matrix $\mathbf A$, define $m(\mathbf A)$ and $M(\mathbf A)$ to be minimum and maximum eigenvalue of $\mathbf A$, respectively. Then $m$ and $M$ as functions from the set of such matrices of a given order to real numbers are continuous, e.g. because one way to write them is using the spectral norm $\lVert\cdot\rVert_{\text s}$:
+<details><summary markdown="span">Another line of reasoning to show that $\mathbf W^{(d)}$ is neither p.s.d. nor n.s.d., due to Ilja Gogić, valid on infinite-dimensional Hilbert spaces.[^7]</summary>
+For an arbitrary Hermitian matrix $\mathbf A$, define $m(\mathbf A)$ and $M(\mathbf A)$ to be the minimum and maximum eigenvalues of $\mathbf A$, respectively. Then $m$ and $M$ as functions from the set of such matrices of a given order to real numbers are continuous, e.g. because one way to write them is using the spectral norm $\lVert\cdot\rVert_{\text s}$:
 
 $$\begin{align*}
 M(\mathbf A) &= \lVert\lVert\mathbf A\rVert_{\text s}\mathbb 1 + \mathbf A\rVert_{\text s}  -
@@ -450,26 +450,15 @@ m(\mathbf A) &= - M(\mathbf A)\;\text,
 
 as can easily be seen in the diagonal basis of Hermitian matrix $\mathbf A$.
 
-Now take some matrices $\mathbf W_1$ and $\mathbf W_2$ that are p.s.d., but not scalar multiples of each other. Now write $\mathbf W^{(d)}$ as a function of $d$, i.e. $\mathbf W(d) \coloneqq \mathbf W_1 + d\mathbf W_2$. Then for any vector $\mathbf x$ and any nonnegative $d$, evidently $\langle\mathbf W(d)\rangle_{\mathbf x} = \langle\mathbf W_1\rangle_{\mathbf x} + d\langle\mathbf W_2\rangle_{\mathbf x}\geq0$, due to both $\mathbf W_1$ and $\mathbf W_2$ being p.s.d. Consequently, $\forall d\geq 0\colon m(\mathbf W(d))\geq0$.
-
-On the other hand, there also exists $\mathbf x_1$ and $d_1<0$ such that $\langle\mathbf W(d\_1)\rangle\_{\mathbf x\_1}<0$ because it is equal to
-
-$$\begin{align*}
-\langle\mathbf W_1 + d_1\mathbf B\rangle_{\mathbf x_1}=
-\langle\mathbf W_1\rangle_{\mathbf x_1} + d_1\langle\mathbf W_2\rangle_{\mathbf x_1}\;\text,
-\end{align*}$$
-
-which can be made negative by choosing $\mathbf x\_1$ such that $\langle\mathbf W\_2\rangle\_{\mathbf x\_1}\neq0$ and $d\_1$ of sufficiently large absolute value. $\mathbf x\_1$ such that $\langle\mathbf W\_2\rangle\_{\mathbf x\_1}\neq0$ always exists because the contrary assumption would --- due to $\mathbf W\_2$ being p.s.d. --- imply that $\mathbf W\_2$ is null.
-
-Now we can use the continuity of map $d\mapsto m(\mathbf W(d))$ (because Hermitian operators are linear and bounded, and thus continuous) to conclude that this map necessarily takes on a zero value, because we demonstrated that it takes on both positive and negative values.
+As before, take ground state matrices $\mathbf W_1$ and $\mathbf W_2$ that are p.s.d., but not scalar multiples of each other and write $\mathbf W^{(d)}$ as a function of $d$, i.e. $\mathbf W(d) \coloneqq \mathbf W_1 + d\mathbf W_2$. Then for any vector $\mathbf x$ and any nonnegative $d$, evidently $\langle\mathbf W(d)\rangle_{\mathbf x} = \langle\mathbf W_1\rangle_{\mathbf x} + d\langle\mathbf W_2\rangle_{\mathbf x}\geq0$, due to both $\mathbf W_1$ and $\mathbf W_2$ being p.s.d. Consequently, $\forall d\geq 0\colon m(\mathbf W(d))\geq0$.
 
 Furthermore, by a simple bound in form of
 
 $$\begin{align*}
-\mathbf W^{(d)} = \mathbf W_1 + d\mathbf W_2 \leq \mathbb1 M(\mathbf W_1) + d\mathbf W_2
+\mathbf W(d) = \mathbf W_1 + d\mathbf W_2 \leq \mathbb1 M(\mathbf W_1) + d\mathbf W_2
 \end{align*}$$
 
-and noting that $\mathbb1 M(\mathbf W_1) + d\mathbf W_2$ has at least one negative value in its spectrum for all $d < -M(\mathbf W_1) / M(\mathbf W_2)$ for nonzero $M(\mathbf W_2)$, we conclude that so does $\mathbf W^{(d)}$. Thus, $d\mapsto m(\mathbf W^{(d)})$ is negative on $\langle-\infty,-M(\mathbf W_1) / M(\mathbf W_2)\rangle$. If we now denote the smallest zero of this function by $d_0$, then for an arbitrary $\varepsilon>0$, it holds that $m(\mathbf W^{(d_0-\varepsilon)})<0$. Such a point exists because, similarly to a previous argument, we know that this function is nonnegative for nonnegative $d$.
+and noting that $\mathbb1 M(\mathbf W_1) + d\mathbf W_2$ has at least one negative value in its spectrum for all $d < -M(\mathbf W_1) / M(\mathbf W_2)$ for nonzero $M(\mathbf W_2)$, we conclude that so does $\mathbf W(d)$. Thus, $d\mapsto m(\mathbf W(d))$ is negative on $\langle-\infty,-M(\mathbf W_1) / M(\mathbf W_2)\rangle$. If we now denote the smallest zero of this function by $d_0$, then for an arbitrary $\varepsilon>0$, it holds that $m(\mathbf W(d_0-\varepsilon))<0$. Such a point exists because, as was observed before, this function is nonnegative for nonnegative $d$.
 
 Furthermore, since $m(\mathbf W(d\_0))=0$, it follows that $M(\mathbf W(d\_0))\neq0$ because otherwise $\mathbf W(d\_0)=\mathbf 0$, which is impossible since $\mathbf W\_1$ and $\mathbf W\_2$ are not scalar multiples of each other. Thus, $M(\mathbf W(d\_0))>0$.
 
