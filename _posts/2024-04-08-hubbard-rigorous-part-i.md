@@ -462,9 +462,9 @@ and noting that $\mathbb1 M(\mathbf W_1) + d\mathbf W_2$ has at least one negati
 
 Furthermore, since $m(\mathbf W(d\_0))=0$, it follows that $M(\mathbf W(d\_0))\neq0$ because otherwise $\mathbf W(d\_0)=\mathbf 0$, which is impossible since $\mathbf W\_1$ and $\mathbf W\_2$ are not scalar multiples of each other. Thus, $M(\mathbf W(d\_0))>0$.
 
-Now we can use the continuity of $d\mapsto m(\mathbf W(d))$ to conclude that there exists some $\varepsilon>0$ such that $M(\mathbf W(d\_0-\varepsilon))>0$, but we have already argued that for any such $\varepsilon$, $m(\mathbf W(d_0-\varepsilon))<0$.
+Now we can use the continuity of $d\mapsto m(\mathbf W(d))$ to conclude that there exists some $\varepsilon_0>0$ such that $M(\mathbf W(d\_0-\varepsilon_0))>0$, but we have already argued that for any such $\varepsilon_0$, $m(\mathbf W(d_0-\varepsilon_0))<0$.
 
-In other words, there exists a parameter choice $d\coloneqq d_0-\varepsilon$ such that $\mathbf W(d_0 -\varepsilon)$ and consequently $\mathbf W^{(d\_0-\varepsilon)}$ is neither p.s.d. nor n.s.d.
+In other words, there exists a parameter choice $d\coloneqq d_0-\varepsilon_0$ such that $\mathbf W(d_0 -\varepsilon_0)$ and consequently $\mathbf W^{(d\_0-\varepsilon_0)}$ is neither p.s.d. nor n.s.d.
 </details>
 
 In other words, the assumption that there exist two distinct normalized ground state vectors was erroneous, proving the uniqueness of the ground state and consequently part 2. of Theorem 1. $\blacksquare$
