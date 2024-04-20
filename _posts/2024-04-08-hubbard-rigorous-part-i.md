@@ -439,7 +439,7 @@ In other words, by choosing different $\beta$, we find that all base elements $\
 
 From $\mathbf W = \pm\|\mathbf W\|$, we can now finally prove part 2. of Theorem 1 via contradiction. Suppose that there exist two normalized --- in sense of $(\text{N})$ --- ground states described by $\mathbf W_1$ and $\mathbf W_2$ such that $\mathbf W_1\neq \pm \mathbf W_2$. Then for every $d\in\mathbb R$, we can define $\mathbf W^{(d)} \coloneqq \mathbf W_1 + d\mathbf W_2$ which is evidently nonzero and (after normalization) a ground state of the system due to $(8)$ being linear in $\mathbf W$. Furthermore, due to $\mathbf W = \pm \|\mathbf W\|$, $\mathbf W_1$ and $\mathbf W_2$ are either p.s.d. or n.s.d. We can assume WLOG that both $\mathbf W_1$ and $\mathbf W_2$ are, for example, p.s.d. because if they are of different definiteness, we can simply employ $d\leadsto-d$, or change sign of the whole expression (evidently not changing the fact that the total operator is neither p.s.d. nor n.s.d.), and  by combining these two operations, all four cases are handled analogously. Thus, with this assumption, we conclude that $\text{Tr}\mathbf W_1 > 0$ and $\text{Tr}\mathbf W_2 > 0$ because otherwise all their eigenvalues would be zero. But due to linearity of trace, $\text{Tr}\mathbf W^{(d)} = \text{Tr}\mathbf W_1+d\,\text{Tr}\mathbf W_2$  and by choosing an obvious $d$, we get $\text{Tr}\mathbf W^{(d)} = 0$. Since $\mathbf W_1$ and $\mathbf W_2$ are not scalar multiples of one another, it is not possible that all eigenvalues of $\mathbf W^{(d)}$ are zero. But if at least one of them is negative (positive), there ought to exist at least one positive (negative) so that they could sum up to vanishing trace. Thus, we conclude that for this choice of $d$, the operator $\mathbf W^{(d)}$ is neither p.s.d. nor n.s.d. and therefore does not describe a ground state of the system[^6].
 
-<details><summary markdown="span">Another line of reasoning to show that $\mathbf W^{(d)}$ is neither p.s.d. nor n.s.d., due to Ilja Gogić, valid on infinite-dimensional Hilbert spaces.[^7]</summary>
+<details><summary markdown="span">Another line of reasoning to show that $\mathbf W^{(d)}$ is neither p.s.d. nor n.s.d., due to Ilja Gogić, and also valid on infinite-dimensional Hilbert spaces.[^7]</summary>
 For an arbitrary Hermitian matrix $\mathbf A$, define $m(\mathbf A)$ and $M(\mathbf A)$ to be the minimum and maximum eigenvalues of $\mathbf A$, respectively. Then $m$ and $M$ as functions from the set of such matrices of a given order to real numbers are continuous, e.g. because one way to write them is using the spectral norm $\lVert\cdot\rVert_{\text s}$:
 
 $$\begin{align*}
@@ -450,7 +450,13 @@ m(\mathbf A) &= - M(\mathbf A)\;\text,
 
 as can easily be seen in the diagonal basis of Hermitian matrix $\mathbf A$.
 
-As before, take ground state matrices $\mathbf W_1$ and $\mathbf W_2$ that are p.s.d., but not scalar multiples of each other and write $\mathbf W^{(d)}$ as a function of $d$, i.e. $\mathbf W(d) \coloneqq \mathbf W_1 + d\mathbf W_2$. Then for any vector $\mathbf x$ and any nonnegative $d$, evidently $\langle\mathbf W(d)\rangle_{\mathbf x} = \langle\mathbf W_1\rangle_{\mathbf x} + d\langle\mathbf W_2\rangle_{\mathbf x}\geq0$, due to both $\mathbf W_1$ and $\mathbf W_2$ being p.s.d. Consequently, $\forall d\geq 0\colon m(\mathbf W(d))\geq0$.
+As before, we take arbitrary ground state matrices $\mathbf W_1$ and $\mathbf W_2$ that are p.s.d., but not scalar multiples of each other and write $\mathbf W^{(d)}$ as a function of $d$, i.e. $\mathbf W(d) \coloneqq \mathbf W_1 + d\mathbf W_2$. Then for any vector $\mathbf x$ and any nonnegative $d$, evidently
+
+$$\begin{align*}
+\langle\mathbf W(d)\rangle_{\mathbf x} = \langle\mathbf W_1\rangle_{\mathbf x} + d\langle\mathbf W_2\rangle_{\mathbf x}\geq0\;\text,
+\end{align*}$$
+
+due to both $\mathbf W_1$ and $\mathbf W_2$ being p.s.d. Consequently, $\forall d\geq 0\colon m(\mathbf W(d))\geq0$.
 
 Furthermore, by a simple bound in form of
 
@@ -458,11 +464,11 @@ $$\begin{align*}
 \mathbf W(d) = \mathbf W_1 + d\mathbf W_2 \leq \mathbb1 M(\mathbf W_1) + d\mathbf W_2
 \end{align*}$$
 
-and noting that $\mathbb1 M(\mathbf W_1) + d\mathbf W_2$ has at least one negative value in its spectrum for all $d < -M(\mathbf W_1) / M(\mathbf W_2)$ for nonzero $M(\mathbf W_2)$ (satisfied because otherwise, since $\mathbf W_2$ is p.s.d., it would be null and thus not correspond to a ground state), we conclude that so does $\mathbf W(d)$. Thus, $d\mapsto m(\mathbf W(d))$ is negative on $\langle-\infty,-M(\mathbf W_1) / M(\mathbf W_2)\rangle$. If we now denote the smallest zero of this function by $d_0$, then for an arbitrary $\varepsilon>0$, it holds that $m(\mathbf W(d_0-\varepsilon))<0$. Such a point exists because, as was observed before, this function is nonnegative for nonnegative $d$, and negative on the aforementioned interval -- thus, it attains a zero.
+and noting that $\mathbb1 M(\mathbf W_1) + d\mathbf W_2$ has at least one negative value in its spectrum for all $d < -M(\mathbf W_1) / M(\mathbf W_2)$ for nonzero $M(\mathbf W_2)$ (satisfied because otherwise, since $\mathbf W_2$ is p.s.d., it would be null and thus not correspond to a ground state), we conclude that so does $\mathbf W(d)$. Thus, $d\mapsto m(\mathbf W(d))$ is negative on $\langle-\infty,-M(\mathbf W_1) / M(\mathbf W_2)\rangle$. If we now denote the smallest zero of this function by $d_0$, then for an arbitrary $\varepsilon>0$, it holds that $m(\mathbf W(d_0-\varepsilon))<0$. Such a point exists because, as was observed before, this function is nonnegative for nonnegative $d$, and negative on the aforementioned interval -- thus, it attains a zero value.
 
-Furthermore, since $m(\mathbf W(d\_0))=0$, it follows that $M(\mathbf W(d\_0))\neq0$ because otherwise $\mathbf W(d\_0)=\mathbf 0$, which is impossible since $\mathbf W\_1$ and $\mathbf W\_2$ are not scalar multiples of each other. Thus, $M(\mathbf W(d\_0))>0$.
+Furthermore, since $m(\mathbf W(d\_0))=0$, it follows that $M(\mathbf W(d\_0))\neq0$ because otherwise $\mathbf W(d\_0)=\mathbf 0$, which is impossible since $\mathbf W\_1$ and $\mathbf W\_2$ are not scalar multiples of each other. Therefore, $M(\mathbf W(d\_0))>0$.
 
-Now we can use the continuity of $d\mapsto m(\mathbf W(d))$ to conclude that there exists some $\varepsilon_0>0$ such that $M(\mathbf W(d\_0-\varepsilon_0))>0$, but we have already argued that for any such $\varepsilon_0$, $m(\mathbf W(d_0-\varepsilon_0))<0$.
+Now we can use the continuity of $d\mapsto m(\mathbf W(d))$ to conclude that there exists some $\varepsilon_0>0$ such that $M(\mathbf W(d\_0-\varepsilon_0))>0$, but we have already argued that for any $\varepsilon_0>0$, $m(\mathbf W(d_0-\varepsilon_0))<0$.
 
 In other words, there exists a parameter choice $d\coloneqq d_0-\varepsilon_0$ such that $\mathbf W(d_0 -\varepsilon_0)$ and consequently $\mathbf W^{(d\_0-\varepsilon_0)}$ is neither p.s.d. nor n.s.d.
 </details>
